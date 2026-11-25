@@ -1,0 +1,14 @@
+thermik/
+├── hacs.json
+├── README.md
+└── custom_components/
+    └── thermik/
+        ├── __init__.py
+        ├── manifest.json
+        ├── const.py
+        ├── config_flow.py
+        ├── climate.py
+        ├── strings.json
+        └── translations/
+            ├── de.json
+            └── en.json
