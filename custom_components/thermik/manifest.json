@@ -1,7 +1,7 @@
 {
   "domain": "thermik",
   "name": "Thermik",
-  "codeowners": ["b1ackbyte"],
+  "codeowners": ["@b1ackbyte"],
   "config_flow": true,
   "documentation": "https://github.com/b1ackbyte/thermik",
   "issue_tracker": "https://github.com/b1ackbyte/thermik/issues",
