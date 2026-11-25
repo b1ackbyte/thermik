@@ -14,9 +14,9 @@ Pro Raum: ein Ventil (`climate`), ein Raumsensor (`sensor`) und eine Wunschtempe
   - dazwischen: Ventil bleibt, wie es ist (Hysterese)
 - Ist das Ventil nicht erreichbar, wird nichts gesendet.
 
-## Installation über HACS
+## Installation über Marketplace
 
-1. HACS öffnen, Menü oben rechts, **Benutzerdefinierte Repositories**.
+1. Marketplace öffnen, Menü oben rechts, **Benutzerdefinierte Repositories**.
 2. `https://github.com/b1ackbyte/thermik` eintragen, Kategorie **Integration**.
 3. Thermik installieren und Home Assistant neu starten.
 4. **Einstellungen, Geräte & Dienste, Integration hinzufügen, Thermik.**
