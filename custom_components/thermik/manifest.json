@@ -1,10 +1,10 @@
 {
   "domain": "thermik",
   "name": "Thermik",
-  "codeowners": ["@DEIN_GITHUB_NAME"],
+  "codeowners": ["b1ackbyte"],
   "config_flow": true,
-  "documentation": "https://github.com/DEIN_GITHUB_NAME/thermik",
-  "issue_tracker": "https://github.com/DEIN_GITHUB_NAME/thermik/issues",
+  "documentation": "https://github.com/b1ackbyte/thermik",
+  "issue_tracker": "https://github.com/b1ackbyte/thermik/issues",
   "iot_class": "calculated",
   "version": "1.0.0"
 }
