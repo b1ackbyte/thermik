@@ -76,4 +76,86 @@ Mit älteren Versionen funktioniert dasselbe über HACS: Menü, Benutzerdefinier
 
 Dir gefällt Thermik? Dann freue ich mich über einen Kaffee. Das hält mich wach für den nächsten Code. Danke dir!
 
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-b1ackbyte-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/b1ackbyte)
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+# Thermik
+
+Home Assistant integration that controls radiator valves based on an external room sensor instead of the sensor on the radiator itself.
+
+Per room: one valve (`climate`), one room sensor (`sensor`) and a target temperature as its own thermostat entity. Optionally add window detection, a schedule and presence-based setback.
+
+## How it works
+
+* Each room is created as its own `climate` entity, for example `climate.thermik_arbeitszimmer`.
+* You set the target temperature on this entity, in 0.5-degree steps and without radio delay.
+* On every change of the target temperature, the room sensor or one of the optional sources, and additionally every minute, the valve is controlled:
+   * Room colder than target minus 0.5 degrees: valve set to 30 °C (fully open)
+   * Room at or above the target: valve set to 5 °C (closed)
+   * In between: the valve stays as it is (hysteresis)
+* If the valve is unavailable, nothing is sent.
+
+## Optional features
+
+All three features can be set per room and can be left empty. Without them, Thermik behaves as before.
+
+### Window open
+
+* Select one or more window/door contacts (`binary_sensor`).
+* If any of them stays open longer than the configured time (default 2 minutes, maximum 60), the valve is closed.
+* This means short airing has no effect.
+* As soon as all windows are closed again, Thermik resumes normal control immediately.
+
+### Schedule
+
+* Select a schedule helper (`schedule`).
+* While the schedule is on, your target temperature applies.
+* While the schedule is off, the setback temperature applies (default 18 °C), as long as it is lower than the target temperature.
+
+### Presence
+
+* Select one or more persons (`person`) or trackers (`device_tracker`).
+* If nobody is home, and this lasts longer than the configured time (default 30 minutes), the away temperature applies (default 17 °C), as long as it is lower than the current target.
+* If all persons are unknown or unavailable, heating continues normally.
+
+If schedule and away apply at the same time, the lower value wins.
+
+### Additional attributes
+
+The thermostat entity shows what currently applies:
+
+* `effective_target`: the temperature currently being controlled to
+* `window_open`: window setback is active (only with window contacts)
+* `schedule_eco`: schedule is in setback (only with a schedule)
+* `away`: away setback is active (only with presence)
+
+## Installation
+
+From Home Assistant 2026.11 (Marketplace):
+
+1. Open Settings, Marketplace.
+2. Top right menu, "Add from link".
+3. Enter `https://github.com/b1ackbyte/thermik`, category Integration.
+4. Install Thermik and restart Home Assistant.
+5. Settings, Devices & services, Add integration, Thermik.
+6. For each room, select a name, valve and room sensor. Window, schedule and presence are optional and can be added later under "Configure".
+
+With older versions, the same works through HACS: menu, Custom repositories, enter the repository address, category Integration.
+
+## Notes
+
+* The valve is only ever set to 5 °C or 30 °C, never in between.
+* If an automation is also controlling the same valve, turn it off.
+* Create the schedule helper for the schedule feature in Home Assistant beforehand (Settings, Devices & services, Helpers).
+* The integration is new and not heavily tested. Try it with one room first.
+
+## Support
+
+Do you like Thermik? Then I would be happy about a [coffee](https://buymeacoffee.com/b1ackbyte). It keeps me awake for the next piece of code. Thank you!
+
+
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-b1ackbyte-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/b1ackbyte)
