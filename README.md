@@ -1,5 +1,5 @@
 <p align="center">
-<img src="thermik.png" alt="Thermik" width="200">
+<img src="thermik.png" alt="Thermik" width="400">
 </p>
 
 # Thermik
