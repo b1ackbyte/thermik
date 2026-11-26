@@ -6,7 +6,19 @@
         "data": {
           "name": "Name des Raums",
           "valve": "Heizkörperventil",
-          "sensor": "Raumtemperatur-Sensor"
+          "sensor": "Raumtemperatur-Sensor",
+          "windows": "Fenster-/Türkontakte (optional)",
+          "window_delay": "Fenster offen: Heizung aus nach (Minuten)",
+          "schedule": "Zeitplan (optional)",
+          "eco_temp": "Absenk-Temperatur laut Zeitplan",
+          "presence": "Personen/Tracker für Anwesenheit (optional)",
+          "away_temp": "Temperatur bei Abwesenheit",
+          "away_delay": "Verzögerung Abwesenheit (Minuten)"
+        },
+        "data_description": {
+          "windows": "Ist eines davon länger offen, wird das Ventil geschlossen.",
+          "schedule": "Schedule-Helfer: an = normale Solltemperatur, aus = Absenk-Temperatur.",
+          "presence": "Sind alle nicht zu Hause, wird auf die Abwesenheits-Temperatur abgesenkt."
         }
       }
     },
@@ -21,7 +33,19 @@
         "data": {
           "name": "Name des Raums",
           "valve": "Heizkörperventil",
-          "sensor": "Raumtemperatur-Sensor"
+          "sensor": "Raumtemperatur-Sensor",
+          "windows": "Fenster-/Türkontakte (optional)",
+          "window_delay": "Fenster offen: Heizung aus nach (Minuten)",
+          "schedule": "Zeitplan (optional)",
+          "eco_temp": "Absenk-Temperatur laut Zeitplan",
+          "presence": "Personen/Tracker für Anwesenheit (optional)",
+          "away_temp": "Temperatur bei Abwesenheit",
+          "away_delay": "Verzögerung Abwesenheit (Minuten)"
+        },
+        "data_description": {
+          "windows": "Ist eines davon länger offen, wird das Ventil geschlossen.",
+          "schedule": "Schedule-Helfer: an = normale Solltemperatur, aus = Absenk-Temperatur.",
+          "presence": "Sind alle nicht zu Hause, wird auf die Abwesenheits-Temperatur abgesenkt."
         }
       }
     }

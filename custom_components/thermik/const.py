@@ -7,6 +7,25 @@ CONF_NAME = "name"
 CONF_VALVE = "valve"
 CONF_SENSOR = "sensor"
 
+# Optionale Funktionen pro Raum
+CONF_WINDOWS = "windows"
+CONF_WINDOW_DELAY = "window_delay"  # Minuten
+CONF_SCHEDULE = "schedule"
+CONF_ECO_TEMP = "eco_temp"
+CONF_PRESENCE = "presence"
+CONF_AWAY_TEMP = "away_temp"
+CONF_AWAY_DELAY = "away_delay"  # Minuten
+
+OPTIONAL_KEYS = (
+    CONF_WINDOWS,
+    CONF_WINDOW_DELAY,
+    CONF_SCHEDULE,
+    CONF_ECO_TEMP,
+    CONF_PRESENCE,
+    CONF_AWAY_TEMP,
+    CONF_AWAY_DELAY,
+)
+
 VALVE_OPEN = 30.0
 VALVE_CLOSED = 5.0
 HYSTERESIS = 0.5
@@ -15,3 +34,8 @@ MAX_TEMP = 30.0
 TARGET_STEP = 0.5
 DEFAULT_TARGET = 21.0
 POLL_SECONDS = 60
+
+DEFAULT_WINDOW_DELAY = 2
+DEFAULT_ECO_TEMP = 18.0
+DEFAULT_AWAY_TEMP = 17.0
+DEFAULT_AWAY_DELAY = 30
