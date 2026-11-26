@@ -1,3 +1,7 @@
+<p align="center">
+<img src="thermik.png" alt="Thermik" width="200">
+</p>
+
 # Thermik
 
 Home-Assistant-Integration, die Heizkörperventile nach einem externen Raumsensor regelt statt nach dem Sensor am Heizkörper.
