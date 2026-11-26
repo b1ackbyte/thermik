@@ -2,26 +2,52 @@
   "config": {
     "step": {
       "user": {
-        "title": "Raum hinzufügen",
+        "title": "Add room",
         "data": {
-          "name": "Name des Raums",
-          "valve": "Heizkörperventil",
-          "sensor": "Raumtemperatur-Sensor"
+          "name": "Room name",
+          "valve": "Radiator valve",
+          "sensor": "Room temperature sensor",
+          "windows": "Window/door contacts (optional)",
+          "window_delay": "Window open: heating off after (minutes)",
+          "schedule": "Schedule (optional)",
+          "eco_temp": "Setback temperature when schedule is off",
+          "presence": "Persons/trackers for presence (optional)",
+          "away_temp": "Temperature when away",
+          "away_delay": "Away delay (minutes)"
+        },
+        "data_description": {
+          "windows": "If any of them stays open longer than the set time, the valve is closed.",
+          "window_delay": "Short airing has no effect. 0 = immediately.",
+          "schedule": "Schedule helper: on = normal target temperature, off = setback temperature.",
+          "presence": "If nobody is home, the temperature is lowered to the away temperature."
         }
       }
     },
     "abort": {
-      "already_configured": "Dieses Ventil ist bereits einem Raum zugeordnet."
+      "already_configured": "This valve is already assigned to a room."
     }
   },
   "options": {
     "step": {
       "init": {
-        "title": "Raum ändern",
+        "title": "Change room",
         "data": {
-          "name": "Name des Raums",
-          "valve": "Heizkörperventil",
-          "sensor": "Raumtemperatur-Sensor"
+          "name": "Room name",
+          "valve": "Radiator valve",
+          "sensor": "Room temperature sensor",
+          "windows": "Window/door contacts (optional)",
+          "window_delay": "Window open: heating off after (minutes)",
+          "schedule": "Schedule (optional)",
+          "eco_temp": "Setback temperature when schedule is off",
+          "presence": "Persons/trackers for presence (optional)",
+          "away_temp": "Temperature when away",
+          "away_delay": "Away delay (minutes)"
+        },
+        "data_description": {
+          "windows": "If any of them stays open longer than the set time, the valve is closed.",
+          "window_delay": "Short airing has no effect. 0 = immediately.",
+          "schedule": "Schedule helper: on = normal target temperature, off = setback temperature.",
+          "presence": "If nobody is home, the temperature is lowered to the away temperature."
         }
       }
     }
