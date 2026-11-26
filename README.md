@@ -74,6 +74,6 @@ Mit älteren Versionen funktioniert dasselbe über HACS: Menü, Benutzerdefinier
 
 ## Unterstützen
 
-Dir gefällt Thermik oder eines meiner anderen Projekte? Dann freue ich mich über einen Kaffee. Das hält mich wach für den nächsten Code. Danke dir!
+Dir gefällt Thermik? Dann freue ich mich über einen Kaffee. Das hält mich wach für den nächsten Code. Danke dir!
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-b1ackbyte-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/b1ackbyte)
